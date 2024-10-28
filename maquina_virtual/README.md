@@ -4,8 +4,8 @@ Caso contrario, deberá instalar manualmente todo.
 
 ## Contenido
 
-*   Enlace de descarga: Un enlace a Google Drive donde se encuentra alojada la imagen de la máquina virtual. [Link Máquina Virtual](https://drive.google.com/drive/folders/1-n1MZXYa9SlaX-6XM6o-pxROOkY5StBc?usp=drive_link).
-*   Archivo PDF: Un archivo PDF con instrucciones detalladas para configurar VirtualBox e importar la imagen de la máquina virtual. Este documento también incluirá los pasos para iniciar la máquina virtual y acceder al entorno de desarrollo. [PDF Instructivo](/maquina_virtual/Tutorial_máquinas_virtuales.pdf).
+*   Enlace de descarga: Enlace a Google Drive donde se encuentra alojada la imagen de la máquina virtual. [Link Máquina Virtual](https://drive.google.com/drive/folders/1-n1MZXYa9SlaX-6XM6o-pxROOkY5StBc?usp=drive_link).
+*   Archivo Instructivo: PDF con instrucciones detalladas para configurar VirtualBox e importar la imagen de la máquina virtual. Este documento también incluye los pasos para iniciar la máquina virtual y acceder al entorno de desarrollo. [PDF Instructivo](/maquina_virtual/Tutorial_máquinas_virtuales.pdf).
 
 ## Instrucciones Generales
 1.  Descarga la imagen de la máquina virtual desde el enlace proporcionado.
