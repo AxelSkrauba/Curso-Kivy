@@ -1,0 +1,39 @@
+<RegistroLayout>:
+    orientation: 'vertical'
+    spacing: 10
+    padding: 20
+
+    Label:
+        text: "Usuario:"
+
+    TextInput:
+        id: usuario_input
+        hint_text: "Ingrese su usuario"
+
+    Label:
+        text: "Clave:"
+
+    TextInput:
+        id: clave1_input
+        hint_text: "Ingrese su clave"
+        password: True
+        on_text: root.verificar_seguridad(self.text)
+
+    Label:
+        text: "Confirmar Clave:"
+
+    TextInput:
+        id: clave2_input
+        hint_text: "Confirme su clave"
+        password: True
+        foreground_color: (1, 0, 0, 1) if not root.clave_match else (0, 0, 0, 1)  # Rojo si no coincide, Negro si coincide
+
+    Label:
+        text: "Seguridad de Clave:"
+
+    Label:
+        text: "Débil" if not root.clave_segura else "Segura"
+
+    Button:
+        text: "Registrar"
+        on_release: root.registrar(usuario_input.text, clave1_input.text, clave2_input.text)

@@ -1,0 +1,31 @@
+<CustomLabel>:
+    # Etiqueta customizada para el estilo de la tabla
+    font_size: sp(25)
+    size_hint_y: None
+
+<ScoreScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Puntuaciones'
+            font_size: sp(40)
+        ScrollView:
+            # Widget para hacer scrolling si hay muchos elementos insertados en el espacio asignado al campo
+            do_scroll_x: False
+            do_scroll_y: True
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: 2
+                size_hint_y: None
+                height: self.minimum_height  # La altura se ajusta automáticamente
+                id: score_list 
+        BoxLayout:
+            orientation: 'horizontal'
+            Button:
+                text: 'Inicio'
+                font_size: sp(30)
+                on_release: root.manager.current = 'main'
+            Button:
+                text: 'Reintentar'
+                font_size: sp(30)
+                on_release: root.manager.current = 'game'

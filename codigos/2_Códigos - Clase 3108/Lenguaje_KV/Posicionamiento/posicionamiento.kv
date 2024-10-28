@@ -1,0 +1,36 @@
+<EjemploLayout>:
+    # 1) Primer botón: 'px'
+    # En este botón, estás estableciendo un tamaño absoluto con una anchura de 350 píxeles y una altura de 50 píxeles. 
+    # Luego, usando las propiedades x y y, estás posicionando el botón en las coordenadas (100, 350) en la pantalla.
+    Button:
+        # Sistema de medida "pixel"
+        size_hint: None, None
+        size: 350, 50
+        x: 100
+        y: 350
+        text: "px"
+
+    # 2) Segundo botón: 'dp'
+    # En este caso, también estás definiendo un tamaño absoluto usando dp (density-independent pixels) en lugar de píxeles. 
+    # Esto asegura que el tamaño se adapte a diferentes densidades de pantalla. Luego, utilizas las propiedades pos para definir 
+    # la posición del botón en las coordenadas (100 dp, 270 dp).
+    Button:
+        # Sistema de medida dp (density-independent pixels) en lugar de píxeles.
+        size_hint: None, None
+        size: dp(350), dp(50)
+        pos: dp(100), dp(270)
+        text: "dp"
+    
+    # 3) Tercer botón: '%'
+    # Aquí estás usando size_hint para definir el tamaño del botón en relación con el tamaño del layout padre. 
+    # El botón ocupará el 50% del ancho y el 9% de la altura del layout padre. Luego, usando pos_hint, estás posicionando 
+    # el botón en las coordenadas (10% del ancho del layout, 10% de la altura del layout).
+    Button:
+        # Sistema de medida "porcentual"
+        size_hint: 0.5, 0.09
+        pos_hint: {"x": .1, "y": .1}
+        text: "%"
+
+# Cada enfoque tiene sus propias ventajas y desventajas. El uso de dp es recomendable para el tamaño para que sea más 
+# consistente en diferentes densidades de pantalla. El uso de size_hint permite que los widgets se adapten a diferentes tamaños 
+# de pantalla y orientaciones. El uso de coordenadas y tamaños absolutos con píxeles puede llevar a problemas de diseño en diferentes dispositivos.

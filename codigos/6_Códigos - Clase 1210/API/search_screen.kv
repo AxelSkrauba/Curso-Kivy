@@ -1,0 +1,35 @@
+<SearchScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(16)
+
+        TextInput:
+            id: search_input
+            hint_text: "Ingrese el producto a buscar"
+            text: "play station"
+            multiline: False
+            size_hint_x: 1
+            height: dp(10)
+            font_size: sp(16)  # Tamaño de fuente responsivo
+
+        MDRaisedButton:
+            text: "Buscar"
+            size_hint: None, None
+            size: dp(100), dp(40)
+            pos_hint: {"center_x": 0.5}  # Centramos el botón
+            on_release: root.search_product(search_input.text)
+            theme_text_color: "Secondary"
+
+
+        ScrollView:
+            MDList:
+                id: results_list  # Esta es la lista donde agregaremos elementos MD
+                size_hint_y: None  # Hacemos que el ScrollView tome el mayor espacio
+                height: self.minimum_height  # Ajustamos la altura al contenido
+
+        MDLabel:
+            id: results_label
+            halign: 'center'  # Centramos el texto
+            size_hint_y: None
+            height: dp(48)
+            font_size: sp(16)

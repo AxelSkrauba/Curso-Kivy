@@ -1,0 +1,61 @@
+<RegistroLayout>:
+    RelativeLayout:
+        canvas.before:
+            Color:
+                rgba: 1, 0.5, 0.5, 0.4
+            Rectangle:
+                pos: self.pos
+                size: self.size
+				
+        Label:
+            text: "Usuario:"
+            pos_hint: {'x': 0.1, 'top': 0.9}
+            size_hint: 0.3, 0.1
+        
+        TextInput:
+            id: usuario_input
+            hint_text: "Ingrese su usuario"
+            pos_hint: {'x': 0.4, 'top': 0.9}
+            size_hint: 0.5, 0.1
+        
+        Label:
+            text: "Clave:"
+            pos_hint: {'x': 0.1, 'top': 0.7}
+            size_hint: 0.3, 0.1
+        
+        TextInput:
+            id: clave1_input
+            hint_text: "Ingrese su clave"
+            password: True
+            pos_hint: {'x': 0.4, 'top': 0.7}
+            size_hint: 0.5, 0.1
+            on_text: root.verificar_seguridad(self.text)
+        
+        Label:
+            text: "Confirmar Clave:"
+            pos_hint: {'x': 0.1, 'top': 0.5}
+            size_hint: 0.3, 0.1
+        
+        TextInput:
+            id: clave2_input
+            hint_text: "Confirme su clave"
+            password: True
+            foreground_color: (1, 0, 0, 1) if not root.clave_match else (0, 0, 0, 1)
+            pos_hint: {'x': 0.4, 'top': 0.5}
+            size_hint: 0.5, 0.1
+        
+        Label:
+            text: "Seguridad de Clave:"
+            pos_hint: {'x': 0.1, 'top': 0.3}
+            size_hint: 0.3, 0.1
+        
+        Label:
+            text: "Débil" if not root.clave_segura else "Segura"
+            pos_hint: {'x': 0.4, 'top': 0.3}
+            size_hint: 0.5, 0.1
+        
+        Button:
+            text: "Registrar"
+            on_release: root.registrar(usuario_input.text, clave1_input.text, clave2_input.text)
+            pos_hint: {'x': 0.4, 'top': 0.1}
+            size_hint: 0.2, 0.1

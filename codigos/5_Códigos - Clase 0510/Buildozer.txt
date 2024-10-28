@@ -1,0 +1,25 @@
+Documentacion Buildozer: https://buildozer.readthedocs.io/en/latest/quickstart.html
+
+
+COMANDOS UTILES:
+Consola con entorno virtual activo
+
+	>>buildozer init
+Crea el archivo 'buildozer.spec', con las configuraciones para el empaquetado del apk.
+
+	>>buildozer -v android debug
+Compila el proyecto. La primera vez tarda mucho. Ya me encargue de instalar la mayoria de dependencias para que funcione.
+Si no hay errores, al final del proceso se tiene el .apk dentro del directorio bin/
+
+
+	>>buildozer android deploy run logcat
+Si tiene conectado el celular y activado el modo depurador, este comando instala el apk y lo ejecuta.
+
+
+	>>buildozer -v android debug deploy run logcat
+Comando combinado: compila, reemplaza la instalacion y lanza la aplicacion.
+
+
+En consola van a aparecer mil cosas, va mucha info por el modo debug. Se puede filtrar lo que nos interesa, que podria ser algun mensaje de error de Python por ejemplo.
+
+	>>buildozer -v android deploy run logcat | grep python

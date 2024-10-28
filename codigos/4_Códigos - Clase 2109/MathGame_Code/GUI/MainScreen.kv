@@ -1,0 +1,23 @@
+<MainScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Image:
+            source: 'recursos/my_logo.png'
+            size: self.texture_size
+        TextInput:
+            id: name_input
+            hint_text: 'Ingrese su Nombre'
+            font_size: sp(40)
+        Spinner:
+            id: difficulty_spiner
+            text: 'Seleccione su Nivel'
+            values: ['Facil', 'Medio', 'Dificil']
+            font_size: sp(30)
+        Button:
+            text: 'Iniciar'
+            font_size: sp(30)
+            on_release:
+                app.user_name = name_input.text
+                app.difficulty = difficulty_spiner.text
+                root.manager.current = 'game'
+

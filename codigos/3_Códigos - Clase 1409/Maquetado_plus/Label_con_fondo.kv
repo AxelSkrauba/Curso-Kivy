@@ -1,0 +1,13 @@
+# Define your background color Template
+# https://kivy.org/doc/stable/api-kivy.uix.label.html#sizing-and-text-content
+
+# Nuevo Widget desde frontend, heredado de @Widget
+# Usando <Label>, sobreescribimos directamente la clase. Es decir, estilo para todos los Labels
+<BackgroundLabel@Label>
+    background_color: 0.5, 0.7, 0, 0.6
+    canvas.before:
+        Color:
+            rgba: root.background_color
+        Rectangle:
+            size: self.size
+            pos: self.pos

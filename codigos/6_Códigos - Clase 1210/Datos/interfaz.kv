@@ -1,0 +1,25 @@
+<FileManagerScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        TextInput:
+            id: text_input
+            hint_text: "Ingrese un valor"
+            size_hint: (1, 0.9)
+            width: 300
+            height: 50
+
+        BoxLayout:
+            size_hint: (1, 0.1)
+            orientation: 'horizontal'
+            spacing: dp(10)
+
+            MDRaisedButton:
+                text: "Guardar"
+                size_hint: (0.5, 1)
+                on_release: app.save_data(text_input.text)
+
+            MDRaisedButton:
+                text: "Cargar"
+                size_hint: (0.5, 1)
+                on_release: app.root.ids.text_input.text = app.load_data() if app.load_data() else ""

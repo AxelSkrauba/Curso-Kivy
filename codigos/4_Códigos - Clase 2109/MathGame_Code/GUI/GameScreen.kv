@@ -1,0 +1,20 @@
+<CustomButton>:
+    # Boton customizado para el estilo de los botores para la respuesta
+    font_size: sp(24)
+
+<GameScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: root.name_label
+        Label:
+            text: root.expression_label
+            font_size: sp(35)
+        BoxLayout:
+            # Contenedor de nuestros botones dinamicos
+            orientation: 'horizontal'
+            spacing: 10
+            id: button_list
+        Label:
+            text: root.timer_label
+            font_size: sp(35)
