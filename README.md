@@ -20,7 +20,7 @@ Este repositorio contiene el material del curso de desarrollo de aplicaciones en
 
 ## Cómo usar el repositorio
 
-Este repositorio está organizado en carpetas que contienen la teoría, los códigos, y los documentación general del curso. Puedes navegar por estas carpetas para acceder al contenido que te interese.
+Este repositorio está organizado en carpetas que contienen la teoría, los códigos, y la documentación general del curso. Puedes navegar por estas carpetas para acceder al contenido que te interese.
 
 ## Profesores
 
